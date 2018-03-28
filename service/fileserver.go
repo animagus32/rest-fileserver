@@ -96,16 +96,11 @@ func (s *FileserverService) PostUpload(w http.ResponseWriter, req *http.Request)
 		}
 		fout.Write(buf)
 	}
-	// http.Redirect(w, req, "/", http.StatusTemporaryRedirect)
-	// log.Println(req.RemoteAddr, req.Host)
-	//"http://" + req.Host + filepath[len(s.path):]
+
 	fileUri := s.genFileUri(abspath[len(s.path):], req)
 
 	resData := api.UploadRes{FileUri: fileUri}
 
-	w.Header().Set("Access-Control-Allow-Origin", "*")  //允许访问所有域
-	w.Header().Add("Access-Control-Allow-Headers", "*") //header的类型
-	w.Header().Set("Content-Type", "application/json")
 	Sucess(w, resData, nil)
 	return
 }

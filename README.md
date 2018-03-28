@@ -23,7 +23,7 @@ POST /v1/upload
     "code": 0,
     "message": "",
     "data": {
-    "file_uri": "http://fileserver.alajia.cc/测试目录/02.pdf"
+    "file_uri": "http://localhost/测试目录/02.pdf"
     }
 }
 ```
@@ -48,14 +48,14 @@ GET /v1/file/list?path=阿拉家
             "name": "PPT",
             "path": "阿拉家",
             "file_path": "阿拉家/PPT",
-            "url": "http://fileserver.alajia.cc/阿拉家/PPT",
+            "url": "http://localhost/阿拉家/PPT",
             "type": 1 //1是文件夹
         },
         {
             "name": "download.avi",
             "path": "阿拉家",
             "file_path": "阿拉家/download.avi",
-            "url": "http://fileserver.alajia.cc/阿拉家/download.avi",
+            "url": "http://localhost/阿拉家/download.avi",
             "type": 0 //0是文件
         }
     ]

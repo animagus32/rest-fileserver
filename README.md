@@ -10,9 +10,10 @@ GET /upload
 
 
 #### 上传文件接口  
-POST /v1/upload  
+POST /v1/upload
+
 |参数|类型|说明|
-|:----- |:-------|:-----|  
+|:----- |:-------|:-----|
 |file|file|上传文件|
 |path|string|上传相对路径|
 
